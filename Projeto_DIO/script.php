@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $categorias = ['infantil', 'adolecente','adulto','idoso'];
 
 //echo ('</br></br>');
@@ -8,15 +10,32 @@ $nome = $_POST['nome'];
 $idade =$_POST['idade'];
 
 // segurança e boas praticas para inserção de dados.
-if(empty($nome)){echo "o nome não pode ser vazio";
-    return;}
-if(empty($idade)){echo "a idade não pode ser vazia";
-    return;}
-if(strlen($nome) <3){echo "o nome deve ter mais de 3 caracteres";
-    return;}
-if(strlen($nome) >20){echo "o nome é muito extenso";
-    return;}
-if(!is_numeric($idade)){echo "Informe um numero para o campo de iade"; return;}
+if(empty($nome)){
+
+    $_SESSION['mensagem-de-erro'] = "o nome não pode ser vazio, favor inserir os dados";
+    header('location:index.php');
+    return;
+}
+else if(strlen($nome) <3){
+    $_SESSION['mensagem-de-erro'] = "o nome deve conter mais de 3 caracteres, favor inserir os dados";
+    header('location:index.php');
+    return;
+}
+else if(strlen($nome) >20){
+    $_SESSION['mensagem-de-erro'] = "o nome não pode ter mais de 20 caracteres, favor inserir os dados";
+    header('location:index.php');
+    return;
+}
+else if(empty($idade)){
+    $_SESSION['mensagem-de-erro'] = "a idade não pode ser vazia, favor inserir os dados";
+    header('location:index.php');
+    return;
+}
+else if(!is_numeric($idade)){
+    $_SESSION['mensagem-de-erro'] = "insira um numero para a idade";
+    header('location:index.php');
+    return;
+}
 
 //var_dump($nome);
 //var_dump($idade);
@@ -25,15 +44,21 @@ if(!is_numeric($idade)){echo "Informe um numero para o campo de iade"; return;}
 switch ($idade){
 
 case ($idade >= 6 && $idade <= 12) :
-    echo "O nadador ", $nome, " compete na categoria Infantil";
-    break;  
+    $_SESSION["mensagem-de-sucesso"] = "O nadador ".$nome. " compete na categoria Infantil";
+    header('location:index.php');
+    return;  
 case ($idade >= 13 && $idade <= 18):
-    echo "O nadador ", $nome, " compete na categoria Adolecente";
-    break;
+    $_SESSION["mensagem-de-sucesso"] =  "O nadador ".$nome." compete na categoria Adolecente";
+    header('location:index.php');
+    return; 
 case ($idade >= 19 && $idade <= 65):
-    echo 'O nadador ', $nome, " compete na categoria Adulto";
-    break;
-default: echo 'O nadador ', $nome, " compete na categoria Idoso";
+    $_SESSION["mensagem-de-sucesso"] =  'O nadador '.$nome. " compete na categoria Adulto";
+    header('location:index.php');
+    return; 
+default: 
+    $_SESSION["mensagem-de-sucesso"] =  'O nadador '.$nome." compete na categoria Idoso";
+    header('location:index.php');
+    return; 
 }
 
 
