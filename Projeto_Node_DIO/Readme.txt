@@ -1,0 +1,1 @@
+projeto para verificação em tempo real da memoria RAM do pc e a exportação para um host e visutalização num naveagador.
