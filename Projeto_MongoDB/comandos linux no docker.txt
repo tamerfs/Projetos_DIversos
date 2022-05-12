@@ -1,0 +1,25 @@
+comandos:
+
+
+docker-compose up -d
+// para subir o serviço DB.
+
+docker container ps
+// lista todos os containers na maquina e serve de teste para saber se subiu.
+
+mongo --host 127.0.0.1:27017 -p taer -u gorgun
+// iniciar o omngoshell e estabelecer a conecção.
+
+show databases
+// monstra os databases criados e serve de teste tambem.
+
+
+O vi/vim sempre começa no modo de comando.
+Você pode pressionar a tecla [Esc] em qualquer momento para retornar ao modo de comando.
+Pressione i para inserir texto.
+Para salvar e sair do vi/vim, pressione a tecla [Esc] e digite ZZ:
+
+Para salvar o arquivo sem sair do prompt do shell, pressione a tecla [Esc] e digite w:
+
+Para entrar no modo ex, pressione a tecla [Esc] e depois: (o cólon).
+Por exemplo, para sair de vi e salvar alterações, pressione [Esc],: (dois-pontos) e digite wq:
