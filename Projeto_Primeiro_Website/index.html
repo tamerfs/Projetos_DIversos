@@ -27,7 +27,7 @@
             </ul>
      </nav>
 
-     <section class="main">
+    <section class="main">
          <article class="conteudo">
              <h1>Titulo1</h1>
              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore eveniet hic corporis exercitationem repellat, iste ducimus tempora pariatur voluptates perspiciatis, fugit voluptate incidunt aliquid voluptas eum quae perferendis, animi inventore.</p>
@@ -49,25 +49,31 @@
              <p>Laborum placeat delectus doloribus, ipsum id, sunt tenetur error quos sapiente aut optio, iure quae eaque nulla velit! Unde itaque porro dolor odio quae repellendus in voluptatem necessitatibus dolorum iure.</p>
              <p>Fugiat, ullam. Iusto tempora, natus quas magnam numquam magni quia? Expedita ipsam deserunt architecto odit temporibus inventore ducimus debitis laborum quo, ut alias corrupti minima voluptatem consequuntur veniam aperiam fugiat!</p>
          </article>
-     </section>
+    </section>
 
-     <form name="formulario de gostos" method="post" action="">
-Nome:   <input type="text"     name="nome"     required=”required”   placeholder= Digite-seu-Usuário>  <br/>
-Senha:  <input type="password" name="Senha"                          placeholder= Digite-sua-Senha>    <br/>
-E-mail: <input type="email"    name="usermail" autofocus=”autofocus” placeholder= Digite-seu-E-mail>   <br/>
-URL:    <input type="URL"      name="homepage"                       placeholder= Digite-seu-LinkedIn> <br/>
+    <form name="formulario" method="post" action="form.php">
 
-<div>Seu sexo é:</div>
-<input type= "radio" name="sexo" value="F"/>Feminino
-<input type= "radio" name="sexo" value="M"/>Masculino<br/>
+        Nome:   <input type="text"     name="nome"     required=”required”   placeholder= Digite-seu-Usuário>  <br/>
+        Senha:  <input type="password" name="Senha"                          placeholder= Digite-sua-Senha>    <br/>
+        E-mail: <input type="email"    name="usermail" autofocus=”autofocus” placeholder= Digite-seu-E-mail>   <br/>
+        URL:    <input type="URL"      name="homepage"                       placeholder= Digite-seu-LinkedIn> <br/>
 
-<div><b>Comente sobre:</b></div>
+        <p><input type="submit" value="Enviar"/> </p>
+
+    </form>
+
+<section>
+    <div>Seu sexo é:</div>
+    <input type= "radio" name="sexo" value="F"/>Feminino
+    <input type= "radio" name="sexo" value="M"/>Masculino<br/>
+
+    <div><b>Comente sobre:</b></div>
         <textarea rows=”20” cols=”70”> </textarea>  <br/>
         <input type="submit" value="Enviar"/>      <br/>
     <br/>
 <!--checkbox para animal-->
 
-<div>O que voce prefere?</div> <br/>
+    <div>O que voce prefere?</div> <br/>
 
         <input type="checkbox" name="animais" value="Gato" /> Gato <br/>
         <input type="checkbox" name="animais" value="Cachorro" /> Cachorro<br/>
@@ -86,28 +92,31 @@ URL:    <input type="URL"      name="homepage"                       placeholder
 
         <div>envie um arquivo para nós, uma foto do seu pet!</div>
         <input name="arquivo" type="file"/><br/>
-    <br/>
+        <br/>
 
 <!--    inserido uma imagem-->
 
         <img src="links/imagem.jpg" alt= "hamster bolt"/> <br/> 
-    <br/> 
-    <br/> 
+        <br/> 
+        <br/> 
 
     <!--caixa de seleção-->
+</section>
 
-    <article><b>SEU PET SERÁ:</b></article>
+
+<article><b>SEU PET SERÁ:</b>
     <select>
            
         <option value="RYCO">PET DE RYCO</option>
         <option value="POBRI">PET DE POBRI</option>        
     </select><br/>   
     <br/> 
+
 <!-- criar um botao com imagem-->
-<div> caso a imagem acima não carregou aperte na abaixo!</div>
+    <div> caso a imagem acima não carregou aperte na abaixo!</div>
     <button type="button"> 
        
-       <img src="https://scontent.fcgh14-1.fna.fbcdn.net/v/t1.18169-9/603976_542866739061500_1387378297_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFO7To3rNit5eh9fB9q3HbOdE_dv7m0FaF0T92_ubQVoQO_VBYGiUAOdkgrWmdWCL6IxHJVa812Jy6fjiUGDkO6&_nc_ohc=QGPKVfZUYHMAX-Jy4Gy&_nc_ht=scontent.fcgh14-1.fna&oh=00_AT9Ki546eqklpOx47nznch9s5__gXLvcXFOMctD1NDyW_w&oe=62353A09" alt= "hamster bolt online" onclick="alert('AI QUE FEIO VC')"/>
+       <img src="https://miro.medium.com/freeze/max/320/1*YayaWR0Sv78fhLH26JTfSA.gif" alt= "hamster bolt online" onclick="alert('VOCE NAO É O BOLT')"/>
     </button>
     <br/><br/>
 <!--escolher ou um ou outro-->
@@ -133,18 +142,14 @@ URL:    <input type="URL"      name="homepage"                       placeholder
             <option value="pitoco">            
         </datalist>
 
+</article>
     
-<!--server client + server side-->
-
-<form action=”processa.php” method=”post”></form>
-
-
 <!--player de audio do blog-->
 <figure>
     <figcaption>Listen to the T-Rex:</figcaption>
     <audio
         controls
-        src="som1.wav">
+        src="links/som1.wav">
             Your browser does not support the
             <code>audio</code> element.
     </audio>
@@ -154,7 +159,7 @@ URL:    <input type="URL"      name="homepage"                       placeholder
     
 
 <audio controls=”controls”>
-    <source src= "som1.wav" type= "audio/vnd.wave”" />
+    <source src= "links/som2.wav"/>
 
     Seu navegador não aceita a tag audio
 </audio>
