@@ -20,6 +20,6 @@ function mouseOver2(){
 }
 
 function mouseout2(){
-    document.getElementById("mouseAlt2").innerHTML = "⁠"
+    document.getElementById("mouseAlt2").innerHTML = ""
 
 }
