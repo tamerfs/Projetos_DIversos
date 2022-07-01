@@ -1,26 +1,42 @@
 body{
     margin-left: 20px;
     margin-top: 10px;
-    background-color: azure;
-    }
+    background-image: url("https://t3.ftcdn.net/jpg/01/63/03/28/360_F_163032871_POKPXHe43CZJvGvQGdfmcNlKYuynE0tU.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+       
+}
 
 h2 {
     font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 1px 1px 2px black;
 }
 
-
+h3 {
+    font-size:1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 2px black;
+}
 .contPopUp{
-    
-    width: 2500px;
-    height: 500px;
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace, 'Arial Narrow', Arial, sans-serif;
+    background-origin: padding-box;
+    align-items: baseline;
+    width: 550px;
+    height: 250px;
     padding: 40px;
     color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 2px black;
 }
 
 .button{
     width: auto;
     color: rgb(0, 0, 0);
     background-color: antiquewhite;
+    align-items: center;
 }
 
 .paragrafo{
@@ -28,9 +44,9 @@ h2 {
 }
 
 .contPopUp2{
-    
-    width: 2500;
-    height: 500px;
+    align-items: center;
+    width: 200;
+    height: 100px;
     padding: 40px;
     color: rgb(0, 0, 0);
 }

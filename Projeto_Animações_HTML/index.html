@@ -12,23 +12,27 @@
 </head>
 
 <body>
-    <h2 class="title"> Apresentação</h2>
+    <h2 class="title"> Animações com JS no HTML</h2>
     
 
+    <h3>"Amei meu filho do momento em que ele abriu os olhos até o momento que você os fechou." - Rei Príamo</h3>
+    
 
     <button class="button" type="button" onclick="textComand()">Aperte Aqui</button>
     <p class= "paragrafo" id="conteudoInterativo"></p>
-
-
-    <div class="contPopUp" onmouseleave="mouseout()" onmouseover="mouseOver()"id="mouseAlt"></div>
-  
-    </br></br>
-
-    <div class="contPopUp2" onmouseleave="mouseout2()" onmouseover="mouseOver2()"id="mouseAlt2"></div>
-
-
-    <h3>Amei meu filho do momento em que ele abriu os olhos até o momento que você os fechou.</h3>
+    <table>
+        <td>
+            <th>
+                <div class="contPopUp" onmouseleave="mouseout()" onmouseover="mouseOver()"id="mouseAlt"></div>
+            </th>
+            <th>
+                <div class="contPopUp" onmouseleave="mouseout3()" onmouseover="mouseOver3()"id="mouseAlt3"></div>
+            </th>
+        </td>
+    </table>
     
+  
+    <div class="contPopUp2" onmouseleave="mouseout2()" onmouseover="mouseOver2()"id="mouseAlt2"></div>
 
     <script src="./src/script.js"></script>
 </body>
