@@ -31,7 +31,7 @@ function verifyArray(){
     } catch (error) {
         throw error;
     }finally{
-        var returnHTML = document.getElementById("tabelaJogadores");
+        var returnHTML = document.getElementById("ts");
         returnHTML.innerHTML = retornoALteravel
     }
 
